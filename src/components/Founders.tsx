@@ -11,28 +11,22 @@ interface Founder {
 
 const founders: Founder[] = [
   {
-    name: "MR.SANKET PASWAN",
+    name: "SANKET",
     role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80&w=600&h=600",
-    bio: "Pioneer in sustainable hydration solutions with a mission to bring purity to every household. Leading Peauro's journey toward a sustainable future through innovation and artisanal care."
+    image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783754751/sanket_fqagkj.jpg",
+    bio: "My vision is to create a lasting legacy in water management — to transform and strengthen India's water management system, for the nation."
   },
   {
-    name: "AMAN KUMAR PASWAN",
+    name: "AMAN",
     role: "Chief Operating Officer",
-    image: "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=400&h=400",
-    bio: "Visionary strategist behind Peauro's distribution network and impact initiatives."
+    image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783754752/aman_img_tapzz2.jpg",
+    bio: "I have complete confidence in myself that, through Peauro, I will solve this problem for the people — driven by hard work, and guided always by our founder's vision."
   },
   {
-    name: "KARAN KUMAR SAW",
-    role: "Chief Financial Officer",
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=400&h=400",
-    bio: "Expert in operational excellence and quality control at the source."
-  },
-  {
-    name: "KUNDAN KUMAR",
-    role: "Prime Member",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400&h=400",
-    bio: "Leading our legal and corporate governance to ensure ethical growth."
+    name: "KUNDAN",
+    role: "Team Member",
+    image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783754753/Kundan_Image_-_Copy_rccges.png",
+    bio: "My message to people is this: I always work to strengthen our organization, because I believe an idea only reaches people when the foundation of that organization is strong."
   }
 ];
 
@@ -132,8 +126,8 @@ export default function Founders() {
           </motion.div>
         </div>
 
-        {/* Members Grid - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Members Grid */}
+        <div className={`grid grid-cols-1 ${members.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-3'} gap-8`}>
           {members.map((founder, idx) => (
             <motion.div
               key={idx}

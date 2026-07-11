@@ -1,4 +1,4 @@
-import { Settings, Shield, Zap, Recycle } from 'lucide-react';
+import { Settings, Shield, Zap, Recycle, Users, Calendar, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const features = [
@@ -22,6 +22,12 @@ const features = [
     title: 'Eco-Friendly',
     description: 'We prioritize 100% recyclable materials and have a robust return-and-reuse program for jars.'
   }
+];
+
+const stats = [
+  { label: "Vendors", value: "500+", icon: Users },
+  { label: "Online Delivery", value: "25%", icon: Calendar },
+  { label: "Purity Checks", value: "100%", icon: CheckCircle2 }
 ];
 
 export default function Features() {
@@ -57,6 +63,32 @@ export default function Features() {
               <p className="text-[10px] text-slate-400 leading-relaxed uppercase tracking-widest font-bold">
                 {feature.description}
               </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+          {stats.map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="relative p-8 bg-slate-50 rounded-[2rem] border border-slate-100 flex items-center gap-6 group hover:bg-slate-900 transition-colors duration-500 shadow-xl shadow-slate-200/40"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-emerald-600 group-hover:text-emerald-400 group-hover:bg-slate-800 transition-colors shadow-sm">
+                <stat.icon size={32} />
+              </div>
+              <div>
+                <div className="text-3xl font-black text-slate-900 group-hover:text-white uppercase italic tracking-tighter transition-colors">
+                  {stat.value}
+                </div>
+                <div className="text-[10px] font-black text-slate-400 group-hover:text-slate-500 uppercase tracking-[0.2em] transition-colors">
+                  {stat.label}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

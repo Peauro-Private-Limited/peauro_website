@@ -51,13 +51,13 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
               </motion.div>
             </div>
             
-            <h1 className="text-[48px] md:text-[56px] font-sans font-black leading-[0.9] tracking-tighter text-slate-900 mb-6">
-              Because<br/>we are<br/>
-              <span className="text-emerald-600 uppercase">NOT PLASTIC.</span>
+            <h1 className="text-[48px] md:text-[56px] font-sans font-black leading-[0.9] tracking-tighter text-slate-900 mb-6 uppercase">
+              Because We Care<br/>
+              <span className="text-emerald-600">Beyond Every Delivery.</span>
             </h1>
             
             <p className="text-[#4e6480] font-bold text-[17px] text-left leading-[23.75px] mb-8 max-w-sm">
-              Our vision is to deliver pure mineral water services nationwide and eliminate the use of harmful regular water jars.
+              We deliver pure, mineral-rich water directly to your doorstep with eco-friendly jars and smart scheduling, ensuring absolute safety and convenience.
             </p>
 
             <div className="flex flex-wrap gap-4">
