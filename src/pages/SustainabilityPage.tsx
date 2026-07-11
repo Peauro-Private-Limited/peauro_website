@@ -140,31 +140,6 @@ export default function SustainabilityPage({ onContactClick }: SustainabilityPag
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-32 bg-gradient-to-br from-[#0B1528] via-[#0F1E36] to-[#080E1B] text-white border-y border-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            {[
-              { val: "50K+", label: "Plastic Bottles Replaced" },
-              { val: "100%", label: "Recyclable Glass" },
-              { val: "0.4kg", label: "Co2 per Delivery" },
-              { val: "25+", label: "Coastal Cleanups" }
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-black text-emerald-500 mb-2 italic">{stat.val}</div>
-                <div className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Sustainable Future */}
       <section className="py-40 text-center px-6 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-emerald-50/50 rounded-full blur-[120px] -z-10" />
