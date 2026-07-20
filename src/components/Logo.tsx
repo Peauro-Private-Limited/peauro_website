@@ -19,15 +19,29 @@ export default function Logo({ className = "h-8", showText = true, textColor, va
   };
 
   return (
-    <div className={`inline-flex items-center ${className}`}>
+    <div className={`inline-flex items-center gap-2 ${className}`}>
       <img 
-        src="/logo.png" 
-        alt="Peauro - Pure Mineral Water" 
-        className="h-full w-auto object-contain"
+        src="https://res.cloudinary.com/da9xdkqvl/image/upload/v1784093996/LOGO.jpg_cqthwg.jpg"
+        alt="Peauro Logo" 
+        className="h-full w-auto object-contain rounded"
         style={getFilterStyle()}
         loading="eager"
         decoding="async"
       />
+      {showText && (
+        <span 
+          className="font-black tracking-tighter lowercase"
+          style={{ 
+            color: variant === 'white' ? 'white' : textColor || '#1a1a1a',
+            fontSize: '1.5em',
+            fontFamily: "'Figtree', sans-serif",
+            fontWeight: 900,
+            letterSpacing: '-0.05em'
+          }}
+        >
+          peauro
+        </span>
+      )}
     </div>
   );
 }

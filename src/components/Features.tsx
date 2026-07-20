@@ -60,7 +60,7 @@ export default function Features() {
               </motion.div>
 
               <h4 className="font-sans font-bold text-lg text-slate-900 mb-3 uppercase tracking-tight">{feature.title}</h4>
-              <p className="text-[10px] text-slate-400 leading-relaxed uppercase tracking-widest font-bold">
+              <p className="text-[10px] text-slate-500 leading-relaxed uppercase tracking-widest font-bold">
                 {feature.description}
               </p>
             </motion.div>
@@ -82,10 +82,10 @@ export default function Features() {
                 <stat.icon size={32} />
               </div>
               <div>
-                <div className="text-3xl font-black text-slate-900 group-hover:text-white uppercase italic tracking-tighter transition-colors">
+                 <div className="text-3xl font-black text-slate-900 group-hover:text-white uppercase tracking-tighter transition-colors">
                   {stat.value}
                 </div>
-                <div className="text-[10px] font-black text-slate-400 group-hover:text-slate-500 uppercase tracking-[0.2em] transition-colors">
+                <div className="text-[10px] font-black text-slate-500 group-hover:text-slate-400 uppercase tracking-[0.2em] transition-colors">
                   {stat.label}
                 </div>
               </div>

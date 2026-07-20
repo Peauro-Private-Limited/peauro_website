@@ -20,8 +20,8 @@ export default function Impact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-sans font-black text-slate-900 mb-6 uppercase leading-[1.1] tracking-tighter">Outpacing the Crisis with Purpose.</h2>
-            <p className="text-slate-500 font-light leading-relaxed mb-10 text-sm">
+             <h2 className="text-4xl font-sans font-black text-slate-900 mb-6 uppercase leading-[1.1] tracking-tighter">Outpacing the Crisis with Purpose</h2>
+            <p className="text-slate-500 font-medium leading-relaxed mb-10 text-sm">
               In India, water scarcity and contamination are growing at an alarming rate. 
               Our mission is to create a parallel surge in accessibility. 
               For every 1% of increase in the water crisis, we strive to double our efforts in providing safe, sustainable hydration.
@@ -30,15 +30,15 @@ export default function Impact() {
             <div className="grid grid-cols-2 gap-8 py-8 border-y border-slate-100 mb-10">
               <div>
                 <div className="text-2xl font-sans font-bold text-emerald-600 mb-1">1M+</div>
-                <div className="text-[9px] uppercase tracking-widest font-bold text-slate-400">Liters Reclaimed</div>
+                <div className="text-[9px] uppercase tracking-widest font-bold text-slate-500">Liters Reclaimed</div>
               </div>
               <div>
                 <div className="text-2xl font-sans font-bold text-emerald-600 mb-1">500k</div>
-                <div className="text-[9px] uppercase tracking-widest font-bold text-slate-400">Families Served</div>
+                <div className="text-[9px] uppercase tracking-widest font-bold text-slate-500">Families Served</div>
               </div>
             </div>
 
-            <p className="text-[10px] text-slate-400 font-sans uppercase tracking-[0.2em] font-bold">
+            <p className="text-[10px] text-slate-500 font-sans uppercase tracking-[0.2em] font-bold">
               "We don't just sell water; we safeguard the right to pristine hydration."
             </p>
           </motion.div>
@@ -85,7 +85,7 @@ export default function Impact() {
                         height={40} 
                         iconType="circle"
                         iconSize={6}
-                        formatter={(value) => <span className="text-[9px] uppercase tracking-widest font-bold text-slate-400 ml-1">{value === 'problem' ? 'Crisis Level' : 'Peauro Effort'}</span>}
+                        formatter={(value) => <span className="text-[9px] uppercase tracking-widest font-bold text-slate-500 ml-1">{value === 'problem' ? 'Crisis Level' : 'Peauro Effort'}</span>}
                     />
                     <Bar 
                         dataKey="problem" 
@@ -110,7 +110,7 @@ export default function Impact() {
             <div className="absolute -top-4 -right-4 bg-white p-4 shadow-xl border border-slate-50 flex items-center gap-4">
               <div className="text-right">
                 <div className="text-xs font-bold text-slate-900">+140%</div>
-                <div className="text-[8px] uppercase tracking-tighter text-slate-400">Effort Velocity</div>
+                 <div className="text-[8px] uppercase tracking-tighter text-slate-500">Effort Velocity</div>
               </div>
               <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

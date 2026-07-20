@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ onSubscribeClick }: HeroProps) {
   return (
-    <section className="relative pt-24 pb-16 overflow-hidden bg-white min-h-[80vh] flex items-center">
+    <section className="relative pt-40 md:pt-48 pb-16 overflow-hidden bg-white min-h-[80vh] flex items-center">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-slate-50">
         <video
@@ -39,18 +39,6 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
             transition={{ duration: 0.8 }}
             className="group"
           >
-            <div className="mb-3 flex items-center gap-3">
-              <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-[9px] font-bold uppercase tracking-[0.2em] rounded-full italic">
-                Artisanal Purity
-              </span>
-              <motion.div 
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                <Droplets size={14} className="text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </motion.div>
-            </div>
-            
             <h1 className="text-[48px] md:text-[56px] font-sans font-black leading-[0.9] tracking-tighter text-slate-900 mb-6 uppercase">
               Because We Care<br/>
               <span className="text-emerald-600">Beyond Every Delivery.</span>
@@ -60,6 +48,7 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
               We deliver pure, mineral-rich water directly to your doorstep with eco-friendly jars and smart scheduling, ensuring absolute safety and convenience.
             </p>
 
+            {/* HIDDEN: Explore Products CTA - uncomment to re-enable
             <div className="flex flex-wrap gap-4">
               <Link 
                 to="/products"
@@ -70,6 +59,7 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
                 <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
+            */}
 
             <div className="mt-12 bg-white rounded-[40px] shadow-2xl shadow-slate-200/60 p-8 flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 border border-slate-50">
               <div className="px-4 flex items-center gap-6 w-full justify-between">
@@ -126,7 +116,7 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="relative flex items-center justify-center lg:justify-end p-4 lg:pr-16"
+            className="relative flex items-center justify-center lg:justify-end p-4 lg:pr-16 -mt-8 lg:-mt-16"
           >
             <div className="relative w-full max-w-[420px] aspect-square rounded-[48px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(16,185,129,0.2)] border-8 border-white bg-white hover:scale-105 transition-transform duration-500 flex items-center justify-center p-2">
               <div className="relative w-full h-full aspect-square">

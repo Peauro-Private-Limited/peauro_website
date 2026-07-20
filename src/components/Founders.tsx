@@ -1,26 +1,37 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 
 interface Founder {
   name: string;
   role: string;
   image: string;
   bio: string;
+  instagram?: string;
+  linkedin?: string;
 }
 
 const founders: Founder[] = [
   {
-    name: "SANKET",
+    name: "SANKET PASWAN",
     role: "Founder & CEO",
     image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783754751/sanket_fqagkj.jpg",
-    bio: "My vision is to create a lasting legacy in water management — to transform and strengthen India's water management system, for the nation."
+    bio: "My vision is to create a lasting legacy in water management — to transform and strengthen India's water management system, for the nation.",
+    instagram: "https://www.instagram.com/sanket_paswan__/"
   },
   {
     name: "AMAN",
     role: "Chief Operating Officer",
     image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783754752/aman_img_tapzz2.jpg",
-    bio: "I have complete confidence in myself that, through Peauro, I will solve this problem for the people — driven by hard work, and guided always by our founder's vision."
+    bio: "I have complete confidence in myself that, through Peauro, I will solve this problem for the people — driven by hard work, and guided always by our founder's vision.",
+    instagram: "https://www.instagram.com/i_aman_paswan_?igsh=MW8zcjZ3YWRoNTZhbg==",
+    linkedin: "https://www.linkedin.com/in/aman-kumar-paswan-293393422?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+  },
+  {
+    name: "KARAN",
+    role: "Chief Financial Officer",
+    image: "https://res.cloudinary.com/da9xdkqvl/image/upload/v1783952111/WhatsApp_Image_2026-01-04_at_11.09.25_AM_j4gtcp.jpg",
+    bio: "I constantly strive to ensure that Peauro contributes meaningfully to boosting the nation's economy."
   },
   {
     name: "KUNDAN",
@@ -33,31 +44,6 @@ const founders: Founder[] = [
 export default function Founders() {
   const ceo = founders[0];
   const members = founders.slice(1);
-
-  const BorderTrace = ({ rx }: { rx: string }) => (
-    <svg className="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-visible">
-      <motion.rect
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        fill="transparent"
-        stroke="#10b981"
-        strokeWidth="2"
-        strokeLinecap="round"
-        rx={rx}
-        ry={rx}
-        initial={{ pathLength: 0, opacity: 0 }}
-        variants={{
-          hover: { 
-            pathLength: 1, 
-            opacity: 1,
-            transition: { duration: 1.2, ease: "easeInOut" }
-          }
-        }}
-      />
-    </svg>
-  );
 
   return (
     <section className="py-32 bg-white relative overflow-hidden">
@@ -74,7 +60,7 @@ export default function Founders() {
             <span className="w-12 h-[1px] bg-emerald-500" />
             <span className="text-[10px] uppercase tracking-[0.4em] font-black text-emerald-500">Leadership</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-sans font-black text-slate-900 uppercase tracking-tighter italic mb-4">
+          <h2 className="text-3xl md:text-5xl font-sans font-black text-slate-900 uppercase tracking-tighter mb-4">
             Meet Our <span className="text-emerald-500">Visionaries</span>
           </h2>
           <p className="text-slate-500 max-w-xl font-light text-sm uppercase tracking-widest leading-relaxed">
@@ -92,11 +78,10 @@ export default function Founders() {
             viewport={{ once: true, margin: "-100px" }}
             className="w-full max-w-2xl group cursor-default"
           >
-            <div className="relative bg-slate-50 border border-slate-100 rounded-[3rem] p-6 md:p-12 text-center hover:bg-white hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center">
-              <BorderTrace rx="48" />
+              <div className="relative bg-slate-50 border border-slate-100 rounded-[3rem] p-6 md:p-12 text-center hover:bg-white hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center">
               <div className="relative mb-8">
                 <div className="w-48 h-48 rounded-full border-4 border-emerald-500/30 p-1 group-hover:border-emerald-500 transition-colors duration-500">
-                  <div className="w-full h-full rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 border-4 border-white group-hover:scale-110">
+                  <div className="w-full h-full rounded-full overflow-hidden transition-all duration-500 border-4 border-white group-hover:scale-110">
                     <img 
                       src={ceo.image} 
                       alt={ceo.name} 
@@ -107,7 +92,7 @@ export default function Founders() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2 italic">{ceo.name}</h3>
+              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">{ceo.name}</h3>
               <p className="text-xs uppercase tracking-[0.3em] font-black text-emerald-600 mb-6">{ceo.role}</p>
               
               <p className="text-sm text-slate-600 leading-relaxed font-light max-w-lg mb-8 uppercase tracking-widest">
@@ -115,11 +100,11 @@ export default function Founders() {
               </p>
 
               <div className="flex gap-6">
-                <a href="#" className="p-3 bg-slate-100 text-slate-500 hover:text-white rounded-2xl transition-all hover:bg-emerald-600 relative z-30">
+                <a href="https://www.linkedin.com/in/sanket-paswan-bb67b13a3/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 text-slate-500 hover:text-white rounded-2xl transition-all hover:bg-emerald-600 relative z-30">
                   <Linkedin size={18} />
                 </a>
-                <a href="#" className="p-3 bg-slate-100 text-slate-500 hover:text-white rounded-2xl transition-all hover:bg-emerald-600 relative z-30">
-                  <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <a href={ceo.instagram || "#"} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 text-slate-500 hover:text-white rounded-2xl transition-all hover:bg-emerald-600 relative z-30">
+                  <Instagram size={18} />
                 </a>
               </div>
             </div>
@@ -143,10 +128,9 @@ export default function Founders() {
               className="group cursor-default"
             >
               <div className="relative bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 md:p-8 text-center hover:bg-white hover:shadow-2xl hover:shadow-slate-200/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center h-full">
-                <BorderTrace rx="40" />
                 <div className="relative mb-6">
                   <div className="w-28 h-28 rounded-full border-2 border-emerald-500/30 p-1 group-hover:border-emerald-500 transition-colors duration-500">
-                    <div className="w-full h-full rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 border-2 border-white">
+                    <div className="w-full h-full rounded-full overflow-hidden transition-all duration-500 border-2 border-white">
                       <img 
                         src={founder.image} 
                         alt={founder.name} 
@@ -165,11 +149,11 @@ export default function Founders() {
                 </p>
 
                 <div className="flex gap-4 mt-auto">
-                  <a href="#" className="p-2 bg-slate-100 text-slate-500 hover:text-white rounded-xl transition-all hover:bg-emerald-600 relative z-30">
+                  <a href={founder.linkedin || "#"} {...(founder.linkedin ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="p-2 bg-slate-100 text-slate-500 hover:text-white rounded-xl transition-all hover:bg-emerald-600 relative z-30">
                     <Linkedin size={14} />
                   </a>
-                  <a href="#" className="p-2 bg-slate-100 text-slate-500 hover:text-white rounded-xl transition-all hover:bg-emerald-600 relative z-30">
-                    <svg className="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <a href={founder.instagram || "#"} {...(founder.instagram ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="p-2 bg-slate-100 text-slate-500 hover:text-white rounded-xl transition-all hover:bg-emerald-600 relative z-30">
+                    <Instagram size={14} />
                   </a>
                 </div>
               </div>

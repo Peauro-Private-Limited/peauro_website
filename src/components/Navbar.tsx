@@ -51,18 +51,18 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
   const showDarkNavbar = false;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b h-16 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b h-20 transition-all duration-300 ${
       showDarkNavbar ? 'bg-black/10 border-white/10' : 'bg-white border-slate-200'
     }`}>
       <div className="w-full max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center" aria-label="Peauro - Go to homepage">
-            <Logo className="h-[56px] md:h-[70px]" variant={showDarkNavbar ? 'white' : 'default'} />
+            <Logo className="h-[42px]" variant={showDarkNavbar ? 'white' : 'default'} />
           </Link>
         </div>
 
-        <div className={`hidden md:flex items-center gap-8 text-[10px] uppercase tracking-widest font-bold transition-colors duration-300 ${
-          showDarkNavbar ? 'text-white/80' : 'text-slate-500'
+        <div className={`hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.15em] font-bold transition-colors duration-300 ${
+          showDarkNavbar ? 'text-white/80' : 'text-slate-600'
         }`}>
           <Link
             to="/"
@@ -82,15 +82,10 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
             } ${isHome && activeTab === 'home' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
           </Link>
           <Link
-            to="/#about"
-            onClick={() => {
-              setActiveTab('about');
-              if (isHome) {
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            to="/about"
+            onClick={() => setActiveTab('about')}
             className={`relative py-2 transition-colors ${
-              isHome && activeTab === 'about' 
+              location.pathname === '/about' 
                 ? (showDarkNavbar ? 'text-emerald-400' : 'text-emerald-600') 
                 : (showDarkNavbar ? 'hover:text-white group' : 'hover:text-slate-900 group')
             }`}
@@ -98,18 +93,13 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
             About
             <span className={`absolute bottom-0 left-0 w-full h-[2px] rounded-full transition-transform duration-300 ease-out origin-left ${
               showDarkNavbar ? 'bg-emerald-400' : 'bg-emerald-600'
-            } ${isHome && activeTab === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+            } ${location.pathname === '/about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
           </Link>
           <Link 
-            to="/#impact" 
-            onClick={() => {
-              setActiveTab('impact');
-              if (isHome) {
-                document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            to="/impact" 
+            onClick={() => setActiveTab('impact')}
             className={`relative py-2 transition-colors ${
-              isHome && activeTab === 'impact' 
+              location.pathname === '/impact' 
                 ? (showDarkNavbar ? 'text-emerald-400' : 'text-emerald-600') 
                 : (showDarkNavbar ? 'hover:text-white group' : 'hover:text-slate-900 group')
             }`}
@@ -117,8 +107,9 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
             Impact
             <span className={`absolute bottom-0 left-0 w-full h-[2px] rounded-full transition-transform duration-300 ease-out origin-left ${
               showDarkNavbar ? 'bg-emerald-400' : 'bg-emerald-600'
-            } ${isHome && activeTab === 'impact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+            } ${location.pathname === '/impact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
           </Link>
+          {/* HIDDEN: Products link - uncomment to re-enable
           <Link 
             to="/products" 
             onClick={() => setActiveTab('products')}
@@ -133,20 +124,7 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
               showDarkNavbar ? 'bg-emerald-400' : 'bg-emerald-600'
             } ${location.pathname === '/products' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
           </Link>
-          <Link 
-            to="/sustainability" 
-            onClick={() => setActiveTab('sustainability')}
-            className={`relative py-2 transition-colors ${
-              location.pathname === '/sustainability' 
-                ? (showDarkNavbar ? 'text-emerald-400' : 'text-emerald-600') 
-                : (showDarkNavbar ? 'hover:text-white group' : 'hover:text-slate-900 group')
-            }`}
-          >
-            Sustainability
-            <span className={`absolute bottom-0 left-0 w-full h-[2px] rounded-full transition-transform duration-300 ease-out origin-left ${
-              showDarkNavbar ? 'bg-emerald-400' : 'bg-emerald-600'
-            } ${location.pathname === '/sustainability' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
-          </Link>
+          */}
           <Link 
             to="/milestones" 
             onClick={() => setActiveTab('milestones')}
@@ -166,8 +144,8 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
         <div className="flex items-center gap-6">
           <button 
             onClick={onProfileClick}
-            className={`text-[10px] uppercase tracking-widest font-bold transition-colors ${
-              showDarkNavbar ? 'text-white/80 hover:text-emerald-400' : 'text-slate-500 hover:text-emerald-600'
+            className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${
+              showDarkNavbar ? 'text-white/80 hover:text-emerald-400' : 'text-slate-600 hover:text-emerald-600'
             }`}
           >
             Support
@@ -206,7 +184,7 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-16 left-0 right-0 bg-white border-b border-slate-100 p-8 flex flex-col gap-5 md:hidden shadow-xl"
+          className="absolute top-24 md:top-20 left-0 right-0 bg-white border-b border-slate-100 px-6 py-10 flex flex-col gap-8 md:hidden shadow-2xl"
         >
           <Link 
             to="/" 
@@ -215,57 +193,47 @@ export default function Navbar({ onSubscriptionClick, onProfileClick, selectedLo
               setActiveTab('home');
               window.scrollTo({ top: 0, behavior: 'smooth' }); 
             }}
-            className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-600 hover:text-emerald-600"
+            className="text-[16px] uppercase tracking-[0.2em] font-bold text-slate-700 hover:text-emerald-600 transition-colors"
           >
             Home
           </Link>
           <Link 
-            to="/#about" 
+            to="/about" 
             onClick={() => {
               setIsMenuOpen(false);
               setActiveTab('about');
-              if (isHome) {
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              }
             }}
-            className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-600 hover:text-emerald-600"
+            className={`text-[16px] uppercase tracking-[0.2em] font-bold transition-colors ${location.pathname === '/about' ? 'text-emerald-600' : 'text-slate-700 hover:text-emerald-600'}`}
           >
             About
           </Link>
           <Link 
-            to="/#impact" 
+            to="/impact" 
             onClick={() => {
               setIsMenuOpen(false);
               setActiveTab('impact');
-              if (isHome) {
-                document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' });
-              }
             }}
-            className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-600 hover:text-emerald-600"
+            className={`text-[16px] uppercase tracking-[0.2em] font-bold transition-colors ${location.pathname === '/impact' ? 'text-emerald-600' : 'text-slate-700 hover:text-emerald-600'}`}
           >
             Impact
           </Link>
+          {/* HIDDEN: Mobile Products link - uncomment to re-enable
           <Link 
             to="/products" 
             onClick={() => {
               setIsMenuOpen(false);
               setActiveTab('products');
             }}
-            className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-600 hover:text-emerald-600"
+            className="text-[16px] uppercase tracking-[0.2em] font-bold text-slate-700 hover:text-emerald-600 transition-colors"
           >
             Products
           </Link>
-          <Link 
-            to="/sustainability" 
-            onClick={() => setIsMenuOpen(false)}
-            className={`text-[10px] uppercase tracking-[0.2em] font-bold ${location.pathname === '/sustainability' ? 'text-emerald-600' : 'text-slate-600 hover:text-emerald-600'}`}
-          >
-            Sustainability
-          </Link>
+          */}
+
           <Link 
             to="/milestones" 
             onClick={() => setIsMenuOpen(false)}
-            className={`text-[10px] uppercase tracking-[0.2em] font-bold ${location.pathname === '/milestones' ? 'text-emerald-600' : 'text-slate-600 hover:text-emerald-600'}`}
+            className={`text-[16px] uppercase tracking-[0.2em] font-bold transition-colors ${location.pathname === '/milestones' ? 'text-emerald-600' : 'text-slate-700 hover:text-emerald-600'}`}
           >
             Milestones
           </Link>

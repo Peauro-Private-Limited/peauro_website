@@ -75,26 +75,32 @@ export default function MilestonesPage() {
   });
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-14 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="pt-40 pb-20 bg-gradient-to-br from-[#0B1528] via-[#0F1E36] to-[#080E1B] relative overflow-hidden border-b border-slate-900">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.div
+      <section className="py-12 lg:py-16 bg-gradient-to-b from-slate-900 via-slate-900 to-[#0b1329] text-white relative overflow-hidden border-b border-slate-900/60">
+        {/* Background glow & texture */}
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#00e676_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 -right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase font-sans mb-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-              <Rocket size={14} /> Roadmap to Purity
-            </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter italic leading-[0.85] mb-8">
-              Our Journey & <br /> <span className="text-emerald-600">Milestones.</span>
-            </h1>
-            <p className="text-slate-400 text-sm italic uppercase tracking-[0.4em] font-bold max-w-2xl mx-auto leading-relaxed">
-              From a single drop of inspiration to a nationwide hydration revolution.
-            </p>
-          </motion.div>
+            Our Journey & <span className="text-emerald-400">Milestones</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-slate-300 text-sm md:text-base lg:text-lg font-medium leading-relaxed tracking-wide max-w-2xl mx-auto"
+          >
+            From a single drop of inspiration to a nationwide hydration revolution.
+          </motion.p>
         </div>
       </section>
 
@@ -127,10 +133,10 @@ export default function MilestonesPage() {
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
            >
-              <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter italic mb-10">
+               <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-10">
                 Vision <span className="text-emerald-400">2030</span>
               </h2>
-              <p className="text-slate-200 text-sm italic uppercase tracking-[0.3em] font-bold leading-loose mb-16">
+               <p className="text-slate-200 text-sm uppercase tracking-[0.3em] font-bold leading-loose mb-16">
                 Our ultimate goal is to become the infrastructure of purity for every household in India.
               </p>
               <div className="w-24 h-px bg-emerald-400/30 mx-auto" />
@@ -165,7 +171,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ milestone, index }) => {
       <div className="w-full">
         <div className="bg-slate-50/50 p-8 rounded-[2.5rem] border border-slate-100 hover:border-emerald-200 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-emerald-500/10 group-hover:-translate-y-2 group-hover:translate-x-2 md:group-hover:translate-x-4 group-hover:bg-white group-hover:scale-[1.02]">
           <YearTag year={milestone.year} />
-          <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic mb-2 group-hover:text-emerald-600 transition-colors">
+           <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2 group-hover:text-emerald-600 transition-colors">
             {milestone.title}
           </h3>
           <p className="text-xs text-slate-400 font-bold uppercase tracking-widest leading-relaxed group-hover:text-slate-600 transition-colors">

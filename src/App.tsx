@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import FoundersPage from './pages/FoundersPage';
 import CertificationsPage from './pages/CertificationsPage';
-import SustainabilityPage from './pages/SustainabilityPage';
 import PurityLabs from './pages/PurityLabs';
 import MilestonesPage from './pages/MilestonesPage';
 import TermsOfService from './pages/TermsOfService';
@@ -13,12 +12,14 @@ import RefundPolicy from './pages/RefundPolicy';
 import DeliveryTerms from './pages/DeliveryTerms';
 import Careers from './pages/Careers';
 import ProductsInfo from './pages/ProductsInfo';
+import AboutPage from './pages/AboutPage';
+import ImpactPage from './pages/ImpactPage';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import SubscriptionModal from './components/SubscriptionModal';
 import Profile from './components/Profile';
 import ProductDetailsModal from './components/ProductDetailsModal';
-import BackToTop from './components/BackToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 import LocationSelector from './components/LocationSelector';
 import { Product } from './types';
 import { PRODUCTS } from './constants';
@@ -48,9 +49,10 @@ export default function App() {
               onSubscribeClick={() => setIsSubModalOpen(true)} 
             />
           } />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/impact" element={<ImpactPage />} />
           <Route path="/founders" element={<FoundersPage />} />
           <Route path="/certifications" element={<CertificationsPage />} />
-          <Route path="/sustainability" element={<SustainabilityPage onContactClick={() => setIsProfileOpen(true)} />} />
           <Route path="/purity-labs" element={<PurityLabs />} />
           <Route path="/milestones" element={<MilestonesPage />} />
           <Route path="/terms" element={<TermsOfService />} />
@@ -58,6 +60,7 @@ export default function App() {
           <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/delivery-terms" element={<DeliveryTerms />} />
           <Route path="/careers" element={<Careers />} />
+          {/* HIDDEN: Product section - uncomment to re-enable
           <Route path="/products" element={
             <ProductsInfo 
               onProductClick={(p) => {
@@ -66,6 +69,7 @@ export default function App() {
               }} 
             />
           } />
+          */}
         </Routes>
 
         <Footer />
@@ -94,7 +98,7 @@ export default function App() {
           onSelect={setSelectedLocation}
         />
 
-        <BackToTop />
+        <WhatsAppButton />
       </div>
     </Router>
   );

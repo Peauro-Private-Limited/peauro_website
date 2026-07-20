@@ -47,10 +47,10 @@ export default function PurityLabs() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               <Microscope size={14} /> Advanced Molecular Testing
             </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter italic leading-[0.85] mb-8">
-              Purity <br /> <span className="text-emerald-500">Verified.</span>
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
+               Purity <br /> <span className="text-emerald-500">Verified</span>
             </h1>
-            <p className="text-slate-400 text-sm italic uppercase tracking-[0.4em] font-bold max-w-2xl mx-auto leading-relaxed">
+             <p className="text-slate-400 text-base lg:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
               Every single drop of Peauro goes through a 48-point diagnostic scan at our third-party accredited partner labs.
             </p>
           </motion.div>
@@ -73,7 +73,7 @@ export default function PurityLabs() {
              />
              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-10">
                 <div>
-                   <h3 className="text-white text-xl font-black uppercase italic tracking-tight mb-2">Molecular Scanners</h3>
+                    <h3 className="text-white text-xl font-black uppercase tracking-tight mb-2">Molecular Scanners</h3>
                    <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest">Spectral Analysis Phase</p>
                 </div>
              </div>
@@ -92,7 +92,7 @@ export default function PurityLabs() {
              />
              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-10">
                 <div>
-                   <h3 className="text-white text-xl font-black uppercase italic tracking-tight mb-2">Purity Verification</h3>
+                    <h3 className="text-white text-xl font-black uppercase tracking-tight mb-2">Purity Verification</h3>
                    <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest">Real-time Quality Control</p>
                 </div>
              </div>
@@ -106,7 +106,7 @@ export default function PurityLabs() {
            </div>
            
            <div className="relative z-10">
-              <h2 className="text-4xl font-black text-white uppercase tracking-tighter italic mb-16">
+               <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-16">
                 Current <span className="text-emerald-500">Lab Batch</span> Stats
               </h2>
               
@@ -114,7 +114,7 @@ export default function PurityLabs() {
                  {TEST_PARAMETERS.map((param, idx) => (
                     <div key={idx} className="border-l border-white/10 pl-8">
                        <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.2em] block mb-2">{param.name}</span>
-                       <div className="text-3xl font-black text-white italic mb-1">{param.value}</div>
+                        <div className="text-3xl font-black text-white mb-1">{param.value}</div>
                        <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-4">{param.status}</div>
                        <p className="text-xs text-slate-400 leading-relaxed uppercase tracking-widest">{param.desc}</p>
                     </div>
@@ -126,8 +126,8 @@ export default function PurityLabs() {
         {/* Accreditation Section */}
         <div className="grid md:grid-cols-2 gap-20 items-center">
            <div>
-              <h2 className="text-5xl font-black text-slate-900 uppercase tracking-tighter italic leading-none mb-10">
-                Our Verification <br /> <span className="text-emerald-600">Partners.</span>
+               <h2 className="text-5xl font-black text-slate-900 uppercase tracking-tighter leading-none mb-10">
+                 Our Verification <br /> <span className="text-emerald-600">Partners</span>
               </h2>
               <div className="space-y-6">
                  {LAB_PARTNERS.map((lab, i) => (
@@ -139,7 +139,7 @@ export default function PurityLabs() {
                       className="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between group hover:bg-white hover:shadow-xl transition-all"
                     >
                        <div>
-                          <h4 className="text-lg font-black text-slate-900 uppercase italic tracking-tight">{lab.name}</h4>
+                            <h4 className="text-lg font-black text-slate-900 uppercase tracking-tight">{lab.name}</h4>
                           <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{lab.location} • {lab.specialty}</p>
                        </div>
                        <div className="px-4 py-2 bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest group-hover:bg-emerald-600 transition-colors">
@@ -158,7 +158,7 @@ export default function PurityLabs() {
                        <Award size={48} className="text-emerald-600" />
                        <div className="text-right">
                           <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Certificate ID</div>
-                          <div className="text-xs font-black text-slate-900 uppercase italic">PEAURO-LAB-2024-X</div>
+                           <div className="text-xs font-black text-slate-900 uppercase">PEAURO-LAB-2024-X</div>
                        </div>
                     </div>
                     <div className="space-y-4 relative z-10">
@@ -167,7 +167,7 @@ export default function PurityLabs() {
                        <div className="h-2 w-3/4 bg-slate-100 rounded-full"></div>
                     </div>
                     <div className="mt-auto flex items-center justify-between relative z-10">
-                       <div className="w-24 h-24 rounded-full border-[10px] border-emerald-50 text-emerald-600 flex items-center justify-center font-black italic text-xl">
+                        <div className="w-24 h-24 rounded-full border-[10px] border-emerald-50 text-emerald-600 flex items-center justify-center font-black text-xl">
                           100%
                        </div>
                        <div className="text-right">
@@ -191,7 +191,7 @@ export default function PurityLabs() {
         <section className="mt-40 p-16 bg-slate-50 rounded-[4rem] border border-slate-100 text-center">
           <div className="max-w-2xl mx-auto">
             <ClipboardCheck size={48} className="text-slate-900 mx-auto mb-8" />
-            <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tighter italic mb-6">Open Transparency Report</h2>
+             <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-6">Open Transparency Report</h2>
             <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium mb-10">
               We update our laboratory findings every month. Browse our historical data and see how Peauro maintains consistent purity through seasonal changes.
             </p>

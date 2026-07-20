@@ -19,9 +19,14 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           src={product.image} 
           alt={product.name}
-          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 blur-sm"
           referrerPolicy="no-referrer"
         />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+            <span className="text-[10px] uppercase tracking-[0.3em] font-black text-emerald-600">Coming Soon</span>
+          </div>
+        </div>
       </div>
       
       <div className="text-center px-4 flex-1 flex flex-col items-center">

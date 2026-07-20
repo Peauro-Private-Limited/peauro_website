@@ -90,7 +90,7 @@ export default function SubscriptionModal({ isOpen, onClose, product }: Subscrip
                   <span className="text-[9px] uppercase tracking-widest font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Subscription</span>
                   <span className="text-[9px] uppercase tracking-widest font-bold text-slate-400">Mineral Water</span>
                 </div>
-                <h3 className="text-xl font-sans font-black text-slate-900 mb-4 uppercase tracking-tight italic">{product.name}</h3>
+                 <h3 className="text-xl font-sans font-black text-slate-900 mb-4 uppercase tracking-tight">{product.name}</h3>
                 
                 <div className="flex items-center justify-between">
                    <div className="flex items-center gap-3">
@@ -194,17 +194,17 @@ export default function SubscriptionModal({ isOpen, onClose, product }: Subscrip
                  <div className="space-y-3">
                     <div className="flex items-center justify-between text-[11px]">
                        <span className="text-slate-400 font-bold uppercase tracking-widest">Plan</span>
-                       <span className="text-slate-900 font-black uppercase italic">{quantity} × {product.name}</span>
+                       <span className="text-slate-900 font-black uppercase">{quantity} × {product.name}</span>
                     </div>
                     <div className="flex items-start justify-between text-[11px]">
                        <span className="text-slate-400 font-bold uppercase tracking-widest">Schedule</span>
-                       <span className="text-slate-900 font-black uppercase italic text-right max-w-[150px]">
+                       <span className="text-slate-900 font-black uppercase text-right max-w-[150px]">
                           {selectedDays.length > 0 ? selectedDays.join(', ') : 'No days selected'}
                        </span>
                     </div>
                     <div className="flex items-center justify-between text-[11px]">
                        <span className="text-slate-400 font-bold uppercase tracking-widest">Duration</span>
-                       <span className="text-slate-900 font-black uppercase italic">{frequency}</span>
+                       <span className="text-slate-900 font-black uppercase">{frequency}</span>
                     </div>
                  </div>
               </div>

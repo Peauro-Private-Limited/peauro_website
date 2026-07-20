@@ -13,16 +13,16 @@ const faqs: FAQItem[] = [
     answer: "As per out test, it can be stored for 90 days(3 months)."
   },
   {
-    question: "Is the water truly plastic-free?",
-    answer: "Yes, indeed—our Peauro is 100% biodegradable. It looks like plastic, but it isn't; for our very dream is to make India plastic-free."
+    question: "Where is Peauro water sourced from?",
+    answer: "Peauro water is sourced from pristine, protected underground aquifers. It is naturally filtered through layers of rock and enriched with vital minerals to deliver unmatched purity and a crisp, refreshing taste."
   },
   {
     question: "Can I cancel or pause my delivery?",
     answer: "Absolutely. You can manage your subscription directly from your profile. Pausing or canceling is instant and requires no long-term commitment. You only pay for what you receive."
   },
   {
-    question: "How long does it take to degrade.?",
-    answer: "In industrial facilities it will take around 6 months, In Good managed home compost heap around 12-24 Months."
+    question: "How is Peauro water purified?",
+    answer: "Peauro water undergoes a multi-stage advanced purification process, including multi-grade sand filtration, activated carbon treatment, micron cartridge filtration, and UV sterilization, ensuring absolute purity while preserving essential minerals."
   },
   {
     question: "What is the pH level of Peauro water?",
@@ -42,7 +42,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-[10px] uppercase tracking-[0.4em] font-black text-emerald-600 mb-4 block">Knowledge Base</span>
-          <h2 className="text-4xl md:text-5xl font-sans font-black text-slate-900 uppercase tracking-tighter italic">
+          <h2 className="text-4xl md:text-5xl font-sans font-black text-slate-900 uppercase tracking-tighter">
             Common <span className="text-slate-400">Queries</span>
           </h2>
         </div>

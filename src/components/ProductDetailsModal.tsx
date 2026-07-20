@@ -38,16 +38,21 @@ export default function ProductDetailsModal({ isOpen, onClose, product }: Produc
             </button>
 
             <div className="w-full p-10 overflow-y-auto">
-              <div className="aspect-square bg-slate-50 rounded-3xl p-12 mb-10 flex items-center justify-center">
+              <div className="aspect-square bg-slate-50 rounded-3xl p-12 mb-10 flex items-center justify-center relative">
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain blur-sm"
                 />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
+                    <span className="text-sm uppercase tracking-[0.3em] font-black text-emerald-600">Coming Soon</span>
+                  </div>
+                </div>
               </div>
               
               <div className="text-[10px] uppercase tracking-[0.3em] font-black text-emerald-600 mb-4">{product.category}</div>
-              <h2 className="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter italic leading-none">{product.name}</h2>
+               <h2 className="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter leading-none">{product.name}</h2>
               <div className="flex items-center gap-4 mb-8">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
@@ -70,7 +75,7 @@ export default function ProductDetailsModal({ isOpen, onClose, product }: Produc
                   <div className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">Price per unit</div>
                   <div className="text-4xl font-black text-slate-900">₹{product.price.toFixed(2)}</div>
                 </div>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest italic">Incl. all taxes</div>
+                 <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Incl. all taxes</div>
               </div>
 
               <button 

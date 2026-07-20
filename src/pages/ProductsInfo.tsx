@@ -17,8 +17,8 @@ export default function ProductsInfo({ onProductClick }: ProductsInfoProps) {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Pristine Hydration
             </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter italic leading-[0.85] mb-8">
-              Our <span className="text-emerald-500">Products.</span>
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
+               Our <span className="text-emerald-500">Products</span>
             </h1>
             <p className="text-slate-400 text-sm leading-relaxed max-w-3xl mx-auto lg:text-base font-medium">
               Peauro isn't just water—it's a premium portfolio of curated packaged drinking water experiences tailored to your unique hydration needs and preferences. Each Peauro product is meticulously crafted with purity, taste, and wellness in mind. Our packaged drinking water delivers a refreshing escape from the ordinary.
@@ -70,8 +70,13 @@ export default function ProductsInfo({ onProductClick }: ProductsInfoProps) {
                     transition={{ duration: 1, ease: "easeOut" }}
                     src={product.image} 
                     alt={product.name}
-                    className="w-full max-w-[280px] md:max-w-[340px] h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    className="w-full max-w-[280px] md:max-w-[340px] h-auto object-contain transition-transform duration-700 group-hover:scale-105 blur-sm"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
+                      <span className="text-xs uppercase tracking-[0.3em] font-black text-emerald-600">Coming Soon</span>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             );

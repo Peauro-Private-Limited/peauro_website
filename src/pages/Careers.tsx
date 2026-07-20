@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Briefcase, MapPin, Clock, Send, Upload, TrendingUp, Rocket, HeartPulse, Handshake, Trophy } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Briefcase, MapPin, Clock, Send, Upload, TrendingUp, Rocket, HeartPulse, Handshake, Trophy, X } from 'lucide-react';
 
 const LIFE_FEATURES = [
   {
@@ -77,6 +77,22 @@ export default function Careers() {
     message: ''
   });
 
+  const [showApplyModal, setShowApplyModal] = useState(false);
+  const [selectedJob, setSelectedJob] = useState('');
+  const [quickForm, setQuickForm] = useState({ name: '', email: '', phone: '', position: '', message: '' });
+
+  const handleApplyClick = (jobTitle: string) => {
+    setSelectedJob(jobTitle);
+    setShowApplyModal(true);
+  };
+
+  const handleQuickApply = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Thank you for applying for ${selectedJob}! Our team will contact you soon.`);
+    setShowApplyModal(false);
+    setQuickForm({ name: '', email: '', phone: '', position: '', message: '' });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for your application! Our team will get back to you soon.');
@@ -84,26 +100,33 @@ export default function Careers() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans">
-      <main className="pt-32">
+    <div className="min-h-screen bg-white font-sans pt-14 overflow-x-hidden">
+      <main className="bg-gradient-to-b from-slate-900 via-slate-900 to-[#0b1329] text-white">
         {/* Header Section */}
-        <section className="bg-gradient-to-br from-[#0B1528] via-[#0F1E36] to-[#080E1B] py-24 border-b border-slate-900">
-          <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+        <section className="py-24 lg:py-32 border-b border-slate-900/60 relative overflow-hidden">
+          {/* Background glow & texture */}
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#00e676_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+          <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 -right-32 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-3xl"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-tight uppercase font-sans mb-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                Join the Movement
-              </div>
-              <h1 className="text-4xl md:text-6xl font-sans font-black text-white mb-8 uppercase tracking-tighter italic">
-                Careers at <span className="text-emerald-500">Peauro.</span>
-              </h1>
-              <p className="text-slate-400 text-lg font-light leading-relaxed mb-10 max-w-2xl">
-                We're looking for passionate individuals who believe that access to pure water is a fundamental right. Join us in our mission to redefine hydration.
-              </p>
-            </motion.div>
+              Careers at <span className="text-emerald-400">Peauro</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-slate-300 text-base md:text-lg lg:text-xl font-medium leading-relaxed tracking-wide max-w-3xl mx-auto"
+            >
+              We're looking for passionate individuals who believe that access to pure water is a fundamental right. Join us in our mission to redefine hydration.
+            </motion.p>
           </div>
         </section>
 
@@ -112,7 +135,7 @@ export default function Careers() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-16">
               <div className="text-[10px] uppercase tracking-[0.4em] font-black text-emerald-600 mb-4">Life @ Peauro</div>
-              <h2 className="text-4xl font-sans font-black text-slate-900 uppercase tracking-tighter italic">Grow With Us</h2>
+               <h2 className="text-4xl font-sans font-black text-slate-900 uppercase tracking-tighter">Grow With Us</h2>
             </div>
             
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,7 +166,7 @@ export default function Careers() {
                         <feature.icon size={28} strokeWidth={1.5} />
                       </motion.div>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-tight italic group-hover:text-emerald-600 transition-colors">
+                     <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-tight group-hover:text-emerald-600 transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium">
@@ -157,7 +180,7 @@ export default function Careers() {
         </section>
 
         {/* Opportunities section */}
-        <section className="py-32">
+        <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl font-sans font-bold text-slate-900 mb-16 uppercase tracking-tight">Open Opportunities</h2>
             <div className="grid gap-8">
@@ -179,7 +202,10 @@ export default function Careers() {
                       </div>
                     </div>
                     <p className="text-slate-500 font-light text-sm max-w-md">{job.description}</p>
-                    <button className="px-8 py-3 bg-slate-900 text-white rounded-lg font-bold text-[10px] uppercase tracking-widest hover:bg-emerald-600 transition-colors">
+                    <button 
+                      onClick={() => handleApplyClick(job.title)}
+                      className="px-8 py-3 bg-slate-900 text-white rounded-lg font-bold text-[10px] uppercase tracking-widest hover:bg-emerald-600 transition-colors"
+                    >
                       Apply Now
                     </button>
                   </div>
@@ -190,8 +216,7 @@ export default function Careers() {
         </section>
 
         {/* Application Form */}
-        <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl" />
+        <section className="py-32 bg-gradient-to-br from-[#0B1528] via-[#0F1E36] to-[#080E1B] text-white relative overflow-hidden border-t border-slate-900">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-24 items-center">
               <div>
@@ -294,6 +319,120 @@ export default function Careers() {
           </div>
         </section>
       </main>
+
+      {/* Quick Apply Modal */}
+      <AnimatePresence>
+        {showApplyModal && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowApplyModal(false)}
+              className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[60]"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-[#0B1528] rounded-3xl shadow-2xl z-[70] p-8"
+            >
+              <div className="flex justify-between items-center mb-8">
+                <div>
+                  <h3 className="text-lg font-bold text-white uppercase tracking-tight">Quick Apply</h3>
+                  <p className="text-xs text-slate-400 font-medium mt-1">{selectedJob}</p>
+                </div>
+                <button 
+                  onClick={() => setShowApplyModal(false)}
+                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <X size={18} className="text-slate-400" />
+                </button>
+              </div>
+              
+              <form onSubmit={handleQuickApply} className="space-y-6">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400">Full Name</label>
+                    <input 
+                      required
+                      type="text" 
+                      value={quickForm.name}
+                      onChange={(e) => setQuickForm({...quickForm, name: e.target.value})}
+                      className="w-full bg-transparent border-b border-slate-700 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400">Email Address</label>
+                    <input 
+                      required
+                      type="email" 
+                      value={quickForm.email}
+                      onChange={(e) => setQuickForm({...quickForm, email: e.target.value})}
+                      className="w-full bg-transparent border-b border-slate-700 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400">Phone Number</label>
+                    <input 
+                      required
+                      type="tel" 
+                      value={quickForm.phone}
+                      onChange={(e) => setQuickForm({...quickForm, phone: e.target.value})}
+                      className="w-full bg-transparent border-b border-slate-700 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                      placeholder="+91 000 000 0000"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400">Desired Position</label>
+                    <select 
+                      required
+                      value={quickForm.position}
+                      onChange={(e) => setQuickForm({...quickForm, position: e.target.value})}
+                      className="w-full bg-transparent border-b border-slate-700 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors appearance-none"
+                    >
+                      <option value="" disabled className="bg-[#0B1528] text-slate-400">Select Role</option>
+                      <option value="operations" className="bg-[#0B1528] text-white">Operations Manager</option>
+                      <option value="sales" className="bg-[#0B1528] text-white">Sales Executive</option>
+                      <option value="delivery" className="bg-[#0B1528] text-white">Delivery Partner</option>
+                      <option value="coordinator" className="bg-[#0B1528] text-white">Back Office Co-ordinator</option>
+                      <option value="content" className="bg-[#0B1528] text-white">Content Creator</option>
+                      <option value="other" className="bg-[#0B1528] text-white">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400">Message / Cover Letter</label>
+                  <textarea 
+                    required
+                    value={quickForm.message}
+                    onChange={(e) => setQuickForm({...quickForm, message: e.target.value})}
+                    rows={3}
+                    className="w-full bg-transparent border-b border-slate-700 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors resize-none"
+                    placeholder="Why do you want to join Peauro?"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-400 flex items-center gap-2 cursor-pointer hover:text-emerald-400 transition-colors">
+                    <Upload size={14} /> Upload Resume (PDF)
+                    <input type="file" className="hidden" accept=".pdf" />
+                  </label>
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full py-4 bg-emerald-500 text-white font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all rounded-xl"
+                >
+                  Submit Application
+                </button>
+              </form>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

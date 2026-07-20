@@ -61,10 +61,10 @@ export default function CertificationsPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               <Award size={14} /> Trust & Excellence
             </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter italic leading-[0.85] mb-8">
-              Certified <br /> <span className="text-emerald-500">Excellence.</span>
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
+               Certified <br /> <span className="text-emerald-500">Excellence</span>
             </h1>
-            <p className="text-slate-400 text-sm italic uppercase tracking-[0.4em] font-bold max-w-2xl mx-auto leading-relaxed">
+             <p className="text-slate-400 text-base lg:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
               Our commitment to purity is backed by rigorous testing and international standard certifications.
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ export default function CertificationsPage() {
               <div className="w-16 h-16 bg-slate-900 text-emerald-500 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-500">
                 <cert.icon size={32} />
               </div>
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic mb-2">
+              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2">
                 {cert.title}
               </h3>
               <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-6">
@@ -105,7 +105,7 @@ export default function CertificationsPage() {
         {/* Achievement Timeline */}
         <div className="grid md:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter italic mb-8">
+             <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter mb-8">
               Milestones of <span className="text-emerald-600">Purity</span>
             </h2>
             <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium mb-12">
@@ -121,11 +121,11 @@ export default function CertificationsPage() {
                   viewport={{ once: true }}
                   className="flex gap-10 relative"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center shrink-0 z-10 text-emerald-600 font-black italic text-xs">
+                   <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center shrink-0 z-10 text-emerald-600 font-black text-xs">
                     {item.year}
                   </div>
                   <div>
-                    <h4 className="text-lg font-black text-slate-900 uppercase tracking-tight mb-2 italic">{item.title}</h4>
+                     <h4 className="text-lg font-black text-slate-900 uppercase tracking-tight mb-2">{item.title}</h4>
                     <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-widest font-medium">{item.description}</p>
                   </div>
                 </motion.div>
@@ -166,7 +166,7 @@ export default function CertificationsPage() {
         <section className="mt-40 p-16 bg-slate-50 rounded-[4rem] border border-slate-100 text-center">
           <div className="max-w-2xl mx-auto">
             <FileText size={48} className="text-slate-900 mx-auto mb-8" />
-            <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tighter italic mb-6">Transparency is Purity</h2>
+             <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-6">Transparency is Purity</h2>
             <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium mb-10">
               We believe you have the right to know exactly what you are drinking. Download our latest laboratory test results verified by independent agencies.
             </p>

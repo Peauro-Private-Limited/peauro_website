@@ -87,10 +87,10 @@ export default function Testimonials() {
                 <stat.icon size={32} />
               </div>
               <div>
-                <div className="text-3xl font-black text-slate-900 group-hover:text-white uppercase italic tracking-tighter transition-colors">
+                 <div className="text-3xl font-black text-slate-900 group-hover:text-white uppercase tracking-tighter transition-colors">
                   {stat.value}
                 </div>
-                <div className="text-[10px] font-black text-slate-400 group-hover:text-slate-500 uppercase tracking-[0.2em] transition-colors">
+                <div className="text-[10px] font-black text-slate-500 group-hover:text-slate-400 uppercase tracking-[0.2em] transition-colors">
                   {stat.label}
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Testimonials() {
         </div>
 
         <div className="mb-16 text-center max-w-3xl mx-auto">
-          <h2 className="text-5xl font-black text-slate-900 uppercase tracking-tighter italic leading-[0.9] mb-8">
+           <h2 className="text-5xl font-black text-slate-900 uppercase tracking-tighter leading-[0.9] mb-8">
             Trusted by <span className="text-emerald-600">Pure</span> Seekers
           </h2>
           <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium mb-8">
@@ -138,7 +138,7 @@ export default function Testimonials() {
                         ))}
                       </div>
                     </div>
-                    <p className="text-slate-600 text-sm leading-relaxed uppercase tracking-widest font-light mb-8 italic">
+                     <p className="text-slate-600 text-sm leading-relaxed uppercase tracking-widest font-light mb-8">
                       "{testimonial.content}"
                     </p>
                   </div>
@@ -152,7 +152,7 @@ export default function Testimonials() {
                     </div>
                     <div>
                       <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest">{testimonial.name}</h4>
-                      <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{testimonial.role}</p>
+                       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>

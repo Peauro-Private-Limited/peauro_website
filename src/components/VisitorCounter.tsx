@@ -28,7 +28,7 @@ export default function VisitorCounter() {
       </div>
       <div className="flex flex-col">
         <div className="flex items-center gap-1">
-          <motion.span className="text-xl font-sans font-black text-white tracking-tighter italic">
+           <motion.span className="text-xl font-sans font-black text-white tracking-tighter">
             {rounded}
           </motion.span>
           <span className="text-emerald-500 font-bold text-[10px] uppercase tracking-widest">+</span>

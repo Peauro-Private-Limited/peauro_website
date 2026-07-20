@@ -14,9 +14,9 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <h2 className="text-[42px] md:text-[54px] font-sans font-black text-[#1a2d5e] leading-[1.1] tracking-tight mb-8 italic">
+            <h2 className="text-[42px] md:text-[54px] font-sans font-black text-[#1a2d5e] leading-[1.1] tracking-tight mb-8">
               Crafting purity <br /> 
-              <span className="text-slate-900 not-italic">since 2026.</span>
+               <span className="text-slate-900">since 2026</span>
             </h2>
             
             <div className="space-y-6 text-slate-500 text-lg leading-relaxed font-medium">
@@ -52,7 +52,7 @@ export default function About() {
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
                   <div className="w-12 h-1 bg-emerald-500 mb-4 rounded-full"></div>
-                  <h3 className="text-2xl font-sans font-black text-slate-900 italic tracking-tighter uppercase">
+                   <h3 className="text-2xl font-sans font-black text-slate-900 tracking-tighter uppercase">
                     Purity in <br /> every drop
                   </h3>
                 </div>

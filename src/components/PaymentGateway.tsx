@@ -87,7 +87,7 @@ export default function PaymentGateway({ isOpen, onClose, amount, onSuccess }: P
                 {/* Total Amount */}
                 <div className="text-center py-4 bg-slate-50 rounded-3xl border border-slate-100">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-400 block mb-1">Amount to Pay</span>
-                  <span className="text-4xl font-sans font-black text-slate-900 tracking-tighter italic">
+                   <span className="text-4xl font-sans font-black text-slate-900 tracking-tighter">
                     ₹{amount.toLocaleString()}
                   </span>
                 </div>

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
-import { X as XIcon, ChevronRight, Phone, Mail, ExternalLink, MapPin, Instagram, Facebook, Youtube, Linkedin } from 'lucide-react';
+import { X as XIcon, Phone, Mail, MapPin, Instagram, Facebook, Youtube, Linkedin } from 'lucide-react';
 
 interface ProfileProps {
   isOpen: boolean;
@@ -9,23 +8,7 @@ interface ProfileProps {
   initialTab?: string;
 }
 
-const faqData = [
-  { q: "Where can I find Peauro products?", a: "Peauro products are available through our mobile app and website. You can also find us at select retail stores and local events across Patna and nearby regions in Bihar." },
-  { q: "What is your purification process?", a: "We use a multi-stage purification process including reverse osmosis, UV sterilization, and mineral enrichment to ensure every drop meets the highest purity standards." },
-  { q: "What makes Peauro water unique?", a: "Peauro water is sourced from protected aquifers, undergoes advanced purification, and is packed in 100% biodegradable bottles — combining purity with sustainability." },
-  { q: "How to recycle our biodegradable bottles?", a: "Our bottles are made from plant-based polymers. Simply place them in your organic waste bin or compost pit — they decompose naturally within a few months." }
-];
-
 export default function Profile({ isOpen, onClose }: ProfileProps) {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const navigate = useNavigate();
-
-  const handleViewAll = () => {
-    onClose();
-    setTimeout(() => {
-      document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
-    }, 400);
-  };
   return (
     <AnimatePresence>
       {isOpen && (
@@ -59,100 +42,70 @@ export default function Profile({ isOpen, onClose }: ProfileProps) {
                 className="space-y-10"
               >
                 <div>
-                  <h3 className="text-xl font-sans font-black uppercase tracking-tight text-slate-900 mb-6 italic">Support Hub</h3>
+                  <h3 className="text-xl font-sans font-black uppercase tracking-tight text-slate-900 mb-6">Support Hub</h3>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <a href="tel:+919876543210" className="p-6 bg-slate-50 border border-slate-100 rounded-[2rem] flex flex-col items-center text-center group hover:bg-emerald-50 hover:border-emerald-100 transition-all">
+                    <a href="tel:+918580055400" className="p-6 bg-slate-50 border border-slate-100 rounded-[2rem] flex flex-col items-center text-center group hover:bg-emerald-50 hover:border-emerald-100 transition-all">
                       <div className="p-3 bg-white rounded-2xl text-slate-400 group-hover:text-emerald-600 shadow-sm mb-4 transition-colors">
                         <Phone size={20} />
                       </div>
                       <span className="text-[10px] uppercase tracking-widest font-black text-slate-900">Call Us</span>
-                      <span className="text-[8px] text-slate-400 font-bold uppercase mt-1">Mon-Sat, 9AM-8PM</span>
+                       <span className="text-[8px] text-slate-500 font-bold uppercase mt-1">Mon-Sat, 9AM-8PM</span>
                     </a>
-                    <a href="mailto:support@peauro.com" className="p-6 bg-slate-50 border border-slate-100 rounded-[2rem] flex flex-col items-center text-center group hover:bg-blue-50 hover:border-blue-100 transition-all">
+                    <a href="mailto:Peauroprivatelimited@gmail.com" className="p-6 bg-slate-50 border border-slate-100 rounded-[2rem] flex flex-col items-center text-center group hover:bg-blue-50 hover:border-blue-100 transition-all">
                       <div className="p-3 bg-white rounded-2xl text-slate-400 group-hover:text-blue-600 shadow-sm mb-4 transition-colors">
                         <Mail size={20} />
                       </div>
                       <span className="text-[10px] uppercase tracking-widest font-black text-slate-900">Email</span>
-                      <span className="text-[8px] text-slate-400 font-bold uppercase mt-1">24/7 Response</span>
+                       <span className="text-[8px] text-slate-500 font-bold uppercase mt-1">24/7 Response</span>
                     </a>
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex justify-between items-end">
-                    <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-400">Common Questions & Ans</h4>
-                    <button onClick={handleViewAll} className="text-[9px] text-emerald-600 font-black uppercase tracking-widest flex items-center gap-1 hover:gap-2 transition-all">
-                      View All <ExternalLink size={10} />
-                    </button>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    {faqData.map((item, i) => (
-                      <div key={i} className="border border-slate-100 rounded-2xl overflow-hidden hover:border-slate-300 transition-all">
-                        <button 
-                          onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                          className="w-full p-5 bg-white flex items-center justify-between text-left group"
-                        >
-                          <span className="text-sm font-medium text-slate-700">{item.q}</span>
-                          <ChevronRight size={16} className={`text-slate-300 group-hover:text-slate-900 transition-all duration-300 ${openFaq === i ? 'rotate-90' : ''}`} />
-                        </button>
-                        <AnimatePresence>
-                          {openFaq === i && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                            >
-                              <div className="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4">
-                                {item.a}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-400">Get In Touch</h4>
+                   <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-500">Get In Touch</h4>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl">
                       <div className="p-2 bg-white rounded-xl text-slate-400 shadow-sm">
                         <MapPin size={18} />
                       </div>
-                      <span className="text-sm font-medium text-slate-700">Patna, Bihar, India</span>
+                      <a 
+                        href="https://www.google.com/maps/search/+registered+office+Near+Kali+Mandir,+Ujhandi,+Jamui,+Bihar+%E2%80%93+811307/@24.9379374,86.2031358,6318m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors"
+                      >
+                        Registered Office Near Kali Mandir, Ujhandi, Jamui, Bihar – 811307
+                      </a>
                     </div>
                     <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl">
                       <div className="p-2 bg-white rounded-xl text-slate-400 shadow-sm">
                         <Phone size={18} />
                       </div>
-                      <span className="text-sm font-medium text-slate-700">+91-8051122134</span>
+                      <a href="tel:+918580055400" className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors">+91 85800 55400</a>
                     </div>
                     <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl">
                       <div className="p-2 bg-white rounded-xl text-slate-400 shadow-sm">
                         <Mail size={18} />
                       </div>
-                      <span className="text-sm font-medium text-slate-700 uppercase">hello@peauro.in</span>
+                      <a href="mailto:Peauroprivatelimited@gmail.com" className="text-sm font-medium text-slate-700 uppercase hover:text-emerald-600 transition-colors">Peauroprivatelimited@gmail.com</a>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-400">Follow Us</h4>
+                   <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-500">Follow Us</h4>
                   <div className="flex items-center gap-4">
-                    <a href="#" aria-label="Instagram" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-pink-500 hover:bg-pink-50 hover:border-pink-100 transition-all">
+                    <a href="https://www.instagram.com/peauro_india/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-pink-500 hover:bg-pink-50 hover:border-pink-100 transition-all">
                       <Instagram size={20} />
                     </a>
-                    <a href="#" aria-label="X" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-100 transition-all">
+                    <a href="https://x.com/peauro_india" target="_blank" rel="noopener noreferrer" aria-label="X" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-black hover:bg-slate-100 hover:border-slate-200 transition-all">
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
                     <a href="#" aria-label="Facebook" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-100 transition-all">
                       <Facebook size={20} />
                     </a>
-                    <a href="#" aria-label="Youtube" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-red-500 hover:bg-red-50 hover:border-red-100 transition-all">
+                    <a href="https://www.youtube.com/@peauro_india" target="_blank" rel="noopener noreferrer" aria-label="Youtube" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-red-500 hover:bg-red-50 hover:border-red-100 transition-all">
                       <Youtube size={20} />
                     </a>
                     <a href="#" aria-label="LinkedIn" className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-slate-400 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-100 transition-all">

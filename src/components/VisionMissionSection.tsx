@@ -52,8 +52,8 @@ export default function VisionMissionSection() {
           <h2 className="text-[32px] md:text-[42px] font-sans font-black text-[#1a2d5e] leading-tight tracking-tight mb-4">
             Vision, Mission & Approach
           </h2>
-          <p className="text-slate-400 text-sm md:text-base font-bold uppercase tracking-[0.3em]">
-            Clear intent. Real impact. Sustainable progress.
+          <p className="text-slate-400 text-sm md:text-base font-bold uppercase tracking-[0.1em]">
+            Clear intent , Real impact , Sustainable progress
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function VisionMissionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[32px] p-8 md:p-12 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 overflow-hidden relative group"
+              className="bg-white rounded-[32px] p-8 md:p-12 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-slate-950/12 hover:-translate-y-1 transition-all duration-500 overflow-hidden relative group"
             >
               <div className="flex flex-col md:flex-row gap-10 md:gap-20 relative z-10">
                 <div className="md:w-1/4 flex items-center">
@@ -74,7 +74,7 @@ export default function VisionMissionSection() {
                     <div className="p-3 bg-emerald-50 rounded-2xl group-hover:scale-110 transition-transform duration-500">
                       {item.icon}
                     </div>
-                    <h3 className="text-3xl font-sans font-black text-slate-900 italic tracking-tighter">
+                     <h3 className="text-3xl font-sans font-black text-slate-900 tracking-tighter">
                       {item.title}
                     </h3>
                   </div>
@@ -94,8 +94,13 @@ export default function VisionMissionSection() {
                 </div>
               </div>
 
-              {/* Decorative accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Decorative accents - black shadows all sides on hover */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-black/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute top-0 left-0 w-36 h-36 bg-black/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-0 right-0 w-36 h-36 bg-black/10 rounded-full blur-3xl translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute top-1/2 left-0 w-32 h-48 bg-black/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute top-1/2 right-0 w-32 h-48 bg-black/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
           ))}
         </div>

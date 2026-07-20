@@ -63,7 +63,7 @@ export default function AppPromo() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[44px] md:text-[64px] font-sans font-black text-white leading-[1.05] tracking-tight uppercase italic"
+               className="text-[44px] md:text-[64px] font-sans font-black text-white leading-[1.05] tracking-tight uppercase"
             >
               Coming Soon <br/>
               <span className="text-emerald-500">Our Peauro App</span>
@@ -91,7 +91,7 @@ export default function AppPromo() {
                 className="flex items-center gap-3 px-6 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md rounded-2xl transition-all duration-300 group shadow-lg hover:border-emerald-500/30 hover:shadow-emerald-500/5 active:scale-95 w-full sm:w-auto justify-center"
               >
                 <svg className="w-6 h-6 text-white group-hover:text-emerald-400 transition-colors" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M5,2.5c-0.2,0-0.4,0.1-0.6,0.2l10.9,10.9l3.3-3.3L5,2.5z M3.3,3.7C3.1,3.9,3,4.2,3,4.5v15c0,0.3,0.1,0.6,0.3,0.8l8.2-8.2L3.3,3.7z M12.6,13.2l8.2,8.2c0.2-0.1,0.3-0.4,0.3-0.8V4.5c0-0.3-0.1-0.6-0.3-0.8L12.6,13.2z M15.3,15.9L4.4,21.3c0.2,0.1,0.4,0.2,0.6,0.2c0.3,0,0.6-0.1,0.8-0.2L15.3,15.9z" />
+                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
                 </svg>
                 <div className="text-left">
                   <div className="text-[8px] uppercase tracking-widest text-slate-400 font-bold leading-none mb-1">GET IT ON</div>

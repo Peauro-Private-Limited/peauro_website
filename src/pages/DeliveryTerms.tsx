@@ -16,49 +16,81 @@ export default function DeliveryTerms() {
               <Truck size={24} />
             </div>
             <div>
-              <h1 className="text-3xl font-black text-slate-900 uppercase italic tracking-tighter">Delivery Terms</h1>
-              <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Last Updated: May 2024</p>
+              <h1 className="text-3xl font-black text-slate-900 uppercase tracking-tighter">Delivery Terms</h1>
+              <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Last Updated: 11/07/26</p>
             </div>
           </div>
 
           <div className="prose prose-slate max-w-none">
             <section className="mb-12">
-              <h2 className="text-xl font-black text-slate-900 uppercase italic tracking-tight mb-4 flex items-center gap-2">
-                <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs not-italic">01</span>
-                Delivery Radius
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">01</span>
+                Delivery Area
               </h2>
-              <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium">
-                We currently deliver within major urban sectors of Maharashtra, Bihar, and Jharkhand. Check the location selector for specific availability in your pin code.
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Currently serving select areas within Kankarbagh, Patna (pilot phase). Coverage will expand as we onboard more vendors and riders.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-xl font-black text-slate-900 uppercase italic tracking-tight mb-4 flex items-center gap-2">
-                <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs not-italic">02</span>
-                Timings & Slots
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">02</span>
+                Delivery Tiers
               </h2>
-              <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium">
-                Deliveries are made between 6:00 AM and 9:00 PM. You can choose from 'Early Morning', 'Afternoon', or 'Evening' slots according to your convenience.
+              <ul className="text-sm text-slate-500 leading-relaxed list-disc pl-6 space-y-2">
+                <li>Emergency delivery — single/urgent jar requirement, dispatched via bike, fastest ETA priority.</li>
+                <li>Regular delivery — scheduled/recurring orders, delivered via bike (EV riders preferred where available).</li>
+                <li>Bulk/Event delivery — large volume orders, delivered via auto or mini-truck depending on quantity.</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">03</span>
+                Delivery Windows
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Standard delivery slots: 8 AM–12 PM and 4 PM–8 PM. Emergency orders are prioritized outside these slots based on rider availability.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-xl font-black text-slate-900 uppercase italic tracking-tight mb-4 flex items-center gap-2">
-                <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs not-italic">03</span>
-                Unattended Delivery
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">04</span>
+                Jar Exchange Process
               </h2>
-              <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium">
-                If you are not available at the time of delivery, our partner will attempt to contact you. If unreachable, the delivery will be rescheduled for the next morning.
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Our rider will collect your empty jar at the time of delivering a full one. Please keep the empty jar ready to ensure a smooth, quick exchange.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-xl font-black text-slate-900 uppercase italic tracking-tight mb-4 flex items-center gap-2">
-                <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs not-italic">04</span>
-                Bulk & Corporate Orders
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">05</span>
+                Delivery Charges
               </h2>
-              <p className="text-sm text-slate-500 leading-relaxed uppercase tracking-widest font-medium">
-                Bulk orders (above 50 units) require a 48-hour lead time and are delivered using our specialized heavy-duty logistics fleet.
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Delivery fee, if applicable, is communicated at checkout — or built into the per-jar price.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">06</span>
+                Missed Delivery
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                If you're unavailable during the scheduled window, we'll attempt to reschedule for the same day where possible, or the next available slot. Repeated missed deliveries may require rescheduling to a standard slot only.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+                 <span className="bg-slate-900 text-white w-8 h-8 rounded-lg flex items-center justify-center text-xs">07</span>
+                Rider Conduct
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Our riders are trained to handle jars safely and interact respectfully with customers. Any complaints about rider conduct can be reported for immediate action.
               </p>
             </section>
 
