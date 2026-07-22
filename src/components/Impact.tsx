@@ -51,7 +51,7 @@ export default function Impact() {
           >
             <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100 shadow-sm h-[400px]">
               <div className="h-full w-full">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height={330}>
                   <BarChart data={data} margin={{ top: 20, right: 0, left: -20, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                     <XAxis 

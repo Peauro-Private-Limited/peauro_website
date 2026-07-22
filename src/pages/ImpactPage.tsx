@@ -241,7 +241,7 @@ export default function ImpactPage() {
             {/* Recharts Area Chart Container */}
             <div className="bg-[#040814] p-6 md:p-8 rounded-3xl border border-slate-800/80 shadow-2xl">
               <div className="h-[360px] md:h-[420px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height={360}>
                   <AreaChart
                     data={waterAvailabilityData}
                     margin={{ top: 20, right: 30, left: 10, bottom: 20 }}

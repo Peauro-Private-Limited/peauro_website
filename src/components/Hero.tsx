@@ -28,7 +28,7 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
             type="video/mp4" 
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white/90 dark:from-slate-950/90 dark:via-slate-950/40 dark:to-slate-950/90" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

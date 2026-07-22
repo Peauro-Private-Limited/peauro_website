@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
@@ -22,6 +24,269 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-slate-900 font-sans antialiased;
+    @apply bg-white text-slate-900 font-sans antialiased transition-colors duration-300;
   }
+}
+
+/* Premium Dark Mode Overrides */
+.dark body {
+  background-color: #0b0f19 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Background Overrides */
+.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-\[\#FAF9F6\] {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #334155 !important;
+}
+
+/* Text Overrides */
+.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-300 {
+  color: #64748b !important;
+}
+
+/* Border Overrides */
+.dark .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+.dark .border-slate-300 {
+  border-color: #475569 !important;
+}
+
+/* Divide Border Overrides */
+.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b !important;
+}
+
+.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #334155 !important;
+}
+
+/* Shadow Overrides */
+.dark .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .shadow-slate-200 {
+  --tw-shadow-color: rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Form Inputs & Modals */
+.dark input, .dark textarea, .dark select {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+/* Custom transitions */
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.dark span.font-black.tracking-tighter.lowercase {
+  color: white !important;
+}
+
+/* Custom Hardcoded Text and Background Color Overrides in Dark Mode */
+.dark .text-\[\#0F172A\] {
+  color: #f8fafc !important;
+}
+
+.dark .text-\[\#135A6E\] {
+  color: #38bdf8 !important;
+}
+
+.dark .text-\[\#1a2d5e\] {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-\[\#4e6480\] {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-950 {
+  color: #f8fafc !important;
+}
+
+.dark .bg-emerald-50 {
+  background-color: #064e3b !important;
+}
+
+.dark .text-emerald-900 {
+  color: #a7f3d0 !important;
+}
+
+.dark .border-emerald-200 {
+  border-color: #047857 !important;
+}
+
+.dark ::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Support Hub Card & Hover Overrides in Dark Mode */
+.dark .bg-slate-50 .bg-white, .dark .bg-slate-900 .bg-white {
+  background-color: #1e293b !important;
+}
+
+.dark a[href^="tel:"]:hover {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark a[href^="mailto:"]:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark a[aria-label="Instagram"]:hover {
+  background-color: rgba(236, 72, 153, 0.15) !important;
+  border-color: rgba(236, 72, 153, 0.3) !important;
+}
+
+.dark a[aria-label="X"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark a[aria-label="Facebook"]:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark a[aria-label="Youtube"]:hover {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.dark a[aria-label="LinkedIn"]:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Custom Light Background Overrides in Dark Mode */
+.dark .bg-\[\#fafbfc\] {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-\[\#FAF9F6\] {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-\[\#fcfdfe\] {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-\[\#f3f6fa\] {
+  background-color: #1e293b !important;
+}
+
+/* Opacity-Based Background Class Overrides in Dark Mode */
+.dark .bg-slate-50\/50, .dark .bg-slate-100\/50, .dark .bg-slate-50\/80 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.dark .bg-white\/90, .dark .bg-white\/80, .dark .bg-white\/70, .dark .bg-white\/50 {
+  background-color: rgba(17, 24, 39, 0.8) !important;
+}
+
+.dark .bg-emerald-50\/30 {
+  background-color: rgba(6, 78, 59, 0.2) !important;
+}
+
+.dark .bg-emerald-50\/50 {
+  background-color: rgba(6, 78, 59, 0.3) !important;
+}
+
+/* Amber Detail Overrides in Dark Mode */
+.dark .text-amber-900 {
+  color: #f59e0b !important;
+}
+
+.dark .text-amber-700 {
+  color: #fbbf24 !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: #78350f !important;
+}
+
+/* Opacity Border Overrides in Dark Mode */
+.dark .border-slate-200\/80 {
+  border-color: rgba(51, 65, 85, 0.8) !important;
+}
+
+.dark .border-slate-100\/60 {
+  border-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+.dark .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
