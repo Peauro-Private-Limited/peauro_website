@@ -124,13 +124,13 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
                 <img 
                   src={cycleDiagramInner} 
                   alt="Peauro Circular Flow Diagram Inner"
-                  className="absolute inset-0 w-full h-full object-contain z-10"
+                  className="absolute inset-0 w-full h-full object-contain z-10 [clip-path:circle(49%_at_50%_50%)]"
                 />
                 {/* Outer rotating blue arrow ring */}
                 <img 
                   src={cycleDiagramOuter} 
                   alt="Peauro Circular Flow Diagram Outer"
-                  className="absolute inset-0 w-full h-full object-contain animate-[spin_60s_linear_infinite]"
+                  className="absolute inset-0 w-full h-full object-contain animate-[spin_60s_linear_infinite] [clip-path:circle(49.5%_at_50%_50%)]"
                   style={{ 
                     transformOrigin: '49.658% 49.463%'
                   }}
