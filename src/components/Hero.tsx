@@ -118,7 +118,7 @@ export default function Hero({ onSubscribeClick }: HeroProps) {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative flex items-center justify-center lg:justify-end p-4 lg:pr-16 -mt-8 lg:-mt-16"
           >
-            <div className="relative w-full max-w-[420px] aspect-square rounded-[48px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(16,185,129,0.2)] border-8 border-white bg-white hover:scale-105 transition-transform duration-500 flex items-center justify-center p-2">
+            <div className="relative w-full max-w-[420px] aspect-square hover:scale-105 transition-transform duration-500 flex items-center justify-center">
               <div className="relative w-full h-full aspect-square">
                 {/* Inner static green circle with text */}
                 <img 

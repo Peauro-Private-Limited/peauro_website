@@ -19,13 +19,14 @@ export default function Logo({ className = "h-8", showText = true, textColor, va
       />
       {showText && (
         <span 
-          className="font-black tracking-tighter lowercase"
+          className="font-bold italic tracking-wider lowercase"
           style={{ 
             color: variant === 'white' ? 'white' : textColor || '#1a1a1a',
             fontSize: '1.5em',
-            fontFamily: "'Figtree', sans-serif",
-            fontWeight: 900,
-            letterSpacing: '-0.05em'
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: 700,
+            fontStyle: 'italic',
+            letterSpacing: '0.06em'
           }}
         >
           peauro

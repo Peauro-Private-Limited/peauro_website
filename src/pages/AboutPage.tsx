@@ -92,7 +92,7 @@ export default function AboutPage() {
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight uppercase font-sans italic">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight uppercase font-sans">
               THE PEAURO <span className="text-emerald-500">MODEL:</span><br />
               LAST-MILE PERFECTION
             </h2>
@@ -107,7 +107,7 @@ export default function AboutPage() {
               <div className="text-slate-900 font-black text-xs md:text-sm tracking-widest uppercase">
                 OUR OPERATIONAL CORE:
               </div>
-              <blockquote className="text-slate-500 font-semibold uppercase text-xs md:text-sm tracking-wide leading-relaxed italic">
+              <blockquote className="text-slate-500 font-semibold uppercase text-xs md:text-sm tracking-wide leading-relaxed">
                 "LOCAL VENDORS ARE STRICTLY STOCK AND STORAGE POINTS. THEY DO NOT HANDLE YOUR WATER, THEY DO NOT MANAGE DELIVERY, AND THEY DO NOT MAKE SERVICE DECISIONS."
               </blockquote>
             </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-16 space-y-4"
           >
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight italic font-sans">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight font-sans">
               OUR CORE <span className="text-emerald-600">PRINCIPLES</span>
             </h2>
             <p className="text-slate-500 text-xs md:text-sm font-bold uppercase tracking-widest leading-relaxed">
@@ -188,7 +188,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-8 group-hover:scale-110 transition-transform">
                 <ShieldCheck size={24} />
               </div>
-              <h3 className="text-lg md:text-xl font-black uppercase italic tracking-wide text-slate-900 mb-4">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-wide text-slate-900 mb-4">
                 RADICAL ACCOUNTABILITY
               </h3>
               <p className="text-slate-500 text-xs md:text-sm font-semibold uppercase tracking-wider leading-relaxed">
@@ -207,7 +207,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600 mb-8 group-hover:scale-110 transition-transform">
                 <Droplets size={24} />
               </div>
-              <h3 className="text-lg md:text-xl font-black uppercase italic tracking-wide text-slate-900 mb-4">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-wide text-slate-900 mb-4">
                 ABSOLUTE PURITY
               </h3>
               <p className="text-slate-500 text-xs md:text-sm font-semibold uppercase tracking-wider leading-relaxed">
@@ -226,7 +226,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-600 mb-8 group-hover:scale-110 transition-transform">
                 <Users size={24} />
               </div>
-              <h3 className="text-lg md:text-xl font-black uppercase italic tracking-wide text-slate-900 mb-4">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-wide text-slate-900 mb-4">
                 COMMUNITY & PLANET FIRST
               </h3>
               <p className="text-slate-500 text-xs md:text-sm font-semibold uppercase tracking-wider leading-relaxed">

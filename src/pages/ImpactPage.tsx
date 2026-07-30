@@ -121,7 +121,7 @@ export default function ImpactPage() {
             <div className="text-emerald-600 font-black tracking-[0.2em] text-xs uppercase">
               THE UNSEEN REALITY
             </div>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight italic font-sans">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight font-sans">
               THE SAFE WATER <span className="text-emerald-500">CRISIS</span> IN BIHAR
             </h2>
             <p className="text-slate-500 text-xs md:text-sm font-bold uppercase tracking-widest leading-relaxed">
@@ -140,7 +140,7 @@ export default function ImpactPage() {
               className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300"
             >
               <div>
-                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans italic mb-4">
+                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans mb-4">
                   82%
                 </div>
                 <h3 className="font-black text-slate-900 text-xs md:text-sm uppercase tracking-wider mb-2">
@@ -161,7 +161,7 @@ export default function ImpactPage() {
               className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300"
             >
               <div>
-                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans italic mb-4">
+                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans mb-4">
                   70%+
                 </div>
                 <h3 className="font-black text-slate-900 text-xs md:text-sm uppercase tracking-wider mb-2">
@@ -182,7 +182,7 @@ export default function ImpactPage() {
               className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300"
             >
               <div>
-                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans italic mb-4">
+                <div className="text-4xl md:text-5xl font-black text-slate-900 font-sans mb-4">
                   1 in 4
                 </div>
                 <h3 className="font-black text-slate-900 text-xs md:text-sm uppercase tracking-wider mb-2">
@@ -331,7 +331,7 @@ export default function ImpactPage() {
                   <strong className="text-white uppercase tracking-wider">Data source:</strong> Government estimates (CGWB / Ministry of Housing and Urban Affairs). India's per capita water availability was 5,177 cubic meters per the 1951 census, falling to 1,816 cubic meters in 2001, 1,545 cubic meters in 2011, 1,486 cubic meters in 2021, and projected to be 1,367 cubic meters in 2031.
                 </p>
                 <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-200 font-medium leading-relaxed">
-                  "Ye line curve clearly dikhata hai ki crisis ek slow-moving reality hai — 1951 se lekar 2031 tak paani availability continuously gir rahi hai, already water-stress line (1,700 m³) ke neeche, aur scarcity line (1,000 m³) ki taraf badh rahi hai."
+                 "This line curve clearly demonstrates that the crisis is a slow-moving reality — water availability has been continuously dropping from 1951 to 2031, already falling below the water-stress threshold (1,700 m³) and steadily heading towards the scarcity threshold (1,000 m³)."
                 </div>
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function ImpactPage() {
                 <div className="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center text-red-500 shadow-inner">
                   <ShieldAlert size={28} />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight italic font-sans leading-tight text-slate-900">
+                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight font-sans leading-tight text-slate-900">
                   WHY LOCAL WATER JAR DELIVERY IS FAILING PATNA
                 </h2>
                 <p className="text-slate-500 text-xs md:text-sm font-semibold uppercase tracking-wider leading-relaxed">
@@ -410,7 +410,7 @@ export default function ImpactPage() {
       <section className="py-24 bg-gradient-to-br from-[#0B1528] via-[#0F1E36] to-[#080E1B] text-white relative overflow-hidden border-t border-slate-900">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
 
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight italic font-sans leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight font-sans leading-tight">
             How Peauro Solves the Crisis
           </h2>
 
